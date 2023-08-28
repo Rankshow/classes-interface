@@ -1,45 +1,12 @@
-﻿class Child
-{
-    private int age;
-    private string name;
+﻿
+using Classes;
 
-    // Default constructor:
-    public Child()
-    {
-        name = "N/A";
-    }
 
-    // ! Constructor:
-    public Child(string name, int age)
-    {
-        this.name = name;
-        this.age = age;
-    }
 
-    // *Printing method:
-    public void PrintChild()
-    {
-        Console.WriteLine("{0}, {1} years old.", name, age);
-    }
-}
+PingIPV6 pingIPV6 = new PingIPV6();
+Console.WriteLine(pingIPV6.Init());
+Console.WriteLine(pingIPV6.SendPing());
 
-class StringTest
-{
-    static void Main()
-    {
-        // Create objects by using the new operator:
-        Child child1 = new Child("Craig", 11);
-        Child child2 = new Child("Sally", 10);
-
-        // Create an object using the default constructor:
-        Child child3 = new Child();
-
-        // Display results:
-        Console.Write("Child #1: ");
-        child1.PrintChild();
-        Console.Write("Child #2: ");
-        child2.PrintChild();
-        Console.Write("Child #3: ");
-        child3.PrintChild();
-    }
-}
+PingIPV4 pingIPV4 = new PingIPV4();
+Console.WriteLine(pingIPV4.Init());
+Console.WriteLine(pingIPV4.SendPing());
